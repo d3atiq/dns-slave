@@ -1,0 +1,13 @@
+---
+# tasks file for dns-slave package installation
+
+- name: Install DNS server apt packages
+  become: true
+  apt:
+    update_cache: true
+    name: "{{ item }}"
+    state: present
+  notify: start bind
+  with_items:
+    - bind9
+
