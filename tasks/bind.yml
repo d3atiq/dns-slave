@@ -46,4 +46,3 @@
     mode: 0640
     validate: "named-checkconf %s"
   notify: reload bind
-

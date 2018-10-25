@@ -5,9 +5,6 @@
   become: true
   apt:
     update_cache: true
-    name: "{{ item }}"
+    name: bind9
     state: present
   notify: start bind
-  with_items:
-    - bind9
-
